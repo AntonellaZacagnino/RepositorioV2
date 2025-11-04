@@ -1,0 +1,440 @@
+@import '../../styles/variables';
+
+.contact {
+  padding-top: 100px;
+  padding-bottom: $spacing-xl;
+
+  &__hero {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: $spacing-sm;
+    background: $gradient-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+	  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  &__subtitle {
+    font-size: $font-size-large;
+    color: rgba(87, 73, 100, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  &__content {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (max-width: $mobile) {
+      padding: 0 $spacing-sm;
+    }
+  }
+
+  &__card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: $shadow-medium;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 700px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-dark;
+    }
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+}
+
+.card-header {
+  padding: $spacing-lg;
+
+  @media (max-width: $mobile) {
+    padding: $spacing-md;
+  }
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+
+  @media (max-width: $tablet) {
+    gap: $spacing-md;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-sm;
+  }
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  box-shadow: $shadow-light;
+
+  @media (max-width: $mobile) {
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.profile-info {
+  h2 {
+    font-size: $font-size-xl;
+    color: $color-dark;
+    margin-bottom: 4px;
+    font-weight: 700;
+
+    @media (max-width: $mobile) {
+      font-size: $font-size-large;
+    }
+  }
+
+  .role {
+    font-size: 18px;
+    color: rgba(87, 73, 100, 0.8);
+    margin-bottom: $spacing-xs;
+    font-weight: 500;
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: rgba(87, 73, 100, 0.7);
+    font-size: 14px;
+
+    @media (max-width: $mobile) {
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    i {
+      color: $color-tertiary;
+    }
+  }
+}
+
+.card-body {
+  padding: $spacing-xl;
+  padding-top: 0;
+
+  @media (max-width: $tablet) {
+    padding: $spacing-lg;
+    padding-top: 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: $spacing-md;
+    padding-top: 0;
+  }
+
+  .intro-text {
+    border-top: 2px solid rgba(159, 131, 131, 0.2);
+    padding-top: $spacing-lg;
+    color: rgba(87, 73, 100, 0.8);
+    line-height: 1.8;
+    margin-bottom: $spacing-xl;
+    font-size: 17px;
+    text-align: center;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: $spacing-lg;
+      padding-top: $spacing-md;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 15px;
+      margin-bottom: $spacing-md;
+      padding-top: $spacing-sm;
+    }
+  }
+}
+
+.contact {
+  &__methods {
+    margin-bottom: $spacing-lg;
+  }
+
+  &__method {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-md;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    margin-bottom: $spacing-sm;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+
+    @media (max-width: $mobile) {
+      padding: $spacing-sm;
+      gap: $spacing-xs;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.8);
+      border-color: rgba(159, 131, 131, 0.3);
+      transform: translateY(-2px);
+      box-shadow: $shadow-light;
+
+      .method-arrow {
+        transform: translateX(5px);
+      }
+    }
+
+    &-icon {
+      font-size: 20px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $gradient-dark;
+      border-radius: 50%;
+      color: $color-primary;
+      box-shadow: $shadow-light;
+
+      @media (max-width: $mobile) {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+
+    &-info {
+      flex: 1;
+      
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-dark;
+        margin-bottom: 4px;
+
+        @media (max-width: $mobile) {
+          font-size: 14px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        color: rgba(87, 73, 100, 0.7);
+        margin: 0;
+
+        @media (max-width: $mobile) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.method-arrow {
+  color: $color-tertiary;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.availability-card,
+.response-card,
+.timezone-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: $spacing-md;
+  border-radius: 20px;
+  box-shadow: $shadow-light;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-medium;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    background: $gradient-main;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto $spacing-sm;
+    
+    i {
+      font-size: 20px;
+      color: $color-dark;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    color: $color-dark;
+    margin-bottom: $spacing-sm;
+    font-weight: 600;
+  }
+}
+
+.availability-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.availability-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(87, 73, 100, 0.8);
+  }
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  
+  &.active {
+    background: #4ade80;
+    animation: pulse 2s infinite;
+  }
+}
+
+.response-info {
+  .response-time {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: $spacing-xs;
+    
+    .time-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: $color-dark;
+    }
+    
+    .time-unit {
+      font-size: 14px;
+      color: rgba(87, 73, 100, 0.7);
+    }
+  }
+  
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(87, 73, 100, 0.8);
+  }
+}
+
+.timezone-info {
+  .timezone {
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-dark;
+    margin-bottom: 4px;
+  }
+  
+  .current-time {
+    font-size: 14px;
+    color: rgba(87, 73, 100, 0.7);
+    margin: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.cv-download {
+  display: flex;
+  justify-content: center;
+  margin-top: $spacing-lg;
+  padding-top: $spacing-md;
+  border-top: 2px solid rgba(159, 131, 131, 0.2);
+}
+
+.btn-cv {
+  background: $gradient-dark;
+  color: $color-primary;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  box-shadow: $shadow-medium;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  @media (max-width: $mobile) {
+    padding: $spacing-xs $spacing-md;
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-dark;
+    background: rgba(87, 73, 100, 0.9);
+  }
+
+  i {
+    font-size: 14px;
+
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+}
