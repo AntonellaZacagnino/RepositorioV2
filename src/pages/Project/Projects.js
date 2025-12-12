@@ -50,7 +50,7 @@ const Projects = () => {
       title: 'Fletes JM',
       description: 'Página web para empresa de fletes y cargas de materiales.',
       image: 'fletesjm-desktop',
-      technologies: ['React', 'Express', 'PostgreSQL'],
+      technologies: ['HTML', 'CSS', 'JavaScript'],
       category: 'frontend',
       demoUrl: 'https://www.fletesjm.com.ar/',
       codeUrl: 'https://github.com/AntonellaZacagnino/FletesJM'
