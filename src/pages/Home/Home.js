@@ -36,8 +36,8 @@ const Home = () => {
             </h1>
             <h2 className="hero__subtitle">Desarrolladora Frontend</h2>
             <p className="hero__description">
-              Creo experiencias web únicas y funcionales con tecnologías modernas. 
-              Especializada en React, JavaScript y diseño responsive.
+              Creo experiencias web modernas, funcionales y orientadas al usuario.
+              Como desarrolladora frontend, diseño e implemento interfaces claras, dinámicas y totalmente responsive.
             </p>
             <div className="hero__actions">
               <Link to="/proyectos" className="btn btn-primary">
